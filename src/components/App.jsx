@@ -1,14 +1,13 @@
 import React from "react";
 
 function App() {
+  setInterval(showTime, 1000);
   let time = "TIME";
 
   const [Time, setTime] = React.useState(time);
   function showTime() {
-    setInterval(showTime, 1000);
     setTime((time = new Date().toLocaleTimeString()));
   }
-
   return (
     <div className="container">
       <h1>{Time}</h1>
